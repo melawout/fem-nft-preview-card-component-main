@@ -1,0 +1,138 @@
+:root {
+
+  --clr-primary : hsl(215, 51%, 70%);
+  --clr-secondary : hsl(178, 100%, 50%);
+
+  --clr-neutral-1 : hsl(217, 54%, 11%);
+  --clr-neutral-2 : hsl(216, 50%, 16%);
+  --clr-neutral-3 :  hsl(215, 32%, 27%);
+  --clr-neutral-4 : hsl(0, 0%, 100%);
+
+
+  --ff-base: "Outfit", sans-serif;
+
+  --fw-light-300: 300;
+  --fw-regular-400: 400;
+  --fw-semi-bold-600: 600;
+
+  --fs-400: 1rem;
+  --fs-600: 1.35rem;
+
+  --content-spacing: 1.5rem;
+  --content-padding: 1.5rem
+
+}
+
+/* UTILITIES CLASSES */
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1 {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  line-height: 1;
+}
+
+.white-text {
+  color: var(--clr-neutral-4);
+}
+
+.cyan{
+  color: var(--clr-secondary)
+}
+
+.fw-light {
+  font-weight: var(--fw-light-300);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular-400);
+}
+
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold-600);
+}
+
+
+/* GENERAL STYLING */
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-light-300);
+  background-color: var(--clr-neutral-1);
+  color: var(--clr-neutral-3);
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: var(--content-padding);
+}
+
+@media(min-width : 375px) {
+  .card {
+    max-width: 20rem;
+  }
+}
+
+.card {
+  display: grid;
+  gap: var(--content-spacing);
+  align-content: center;
+  padding: var(--content-padding);
+
+  background-color: var(--clr-neutral-2);
+  border-radius: 1rem;
+}
+
+.card__title{
+  font-size: var(--fs-600);
+}
+
+.card__image{
+  display: grid;
+  place-content: center;
+}
+
+.card__image > img {
+    border-radius: 0.5rem;
+}
+
+.flex-layout {
+  --gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+hr {
+  border: 1px solid;
+}
+
+.card__info{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.card__profile {
+  width: 1.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--clr-neutral-4);
+}
